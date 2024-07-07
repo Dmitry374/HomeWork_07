@@ -7,4 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="pie_chart_background">#616161</color>
+    <color name="amount">#FFFFFF</color>
+    <color name="description">#C3C3C3</color>
+
+    <array name="pie_chart_colors">
+        <item>#7FBCCC</item>
+        <item>#F3F2F2</item>
+        <item>#E38867</item>
+        <item>#E2D5F4</item>
+        <item>#59A0BF</item>
+        <item>#A59DD5</item>
+        <item>#A079B8</item>
+        <item>#ED3D3A</item>
+        <item>#EFB480</item>
+        <item>#5B4998</item>
+    </array>
 </resources>
