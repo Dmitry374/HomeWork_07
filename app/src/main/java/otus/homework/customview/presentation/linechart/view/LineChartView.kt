@@ -180,6 +180,14 @@ class LineChartView @JvmOverloads constructor(
         }
     }
 
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+
+        drawAxis(canvas)
+        drawChart(canvas)
+        drawTextAndSeparators(canvas)
+    }
+
     override fun onSaveInstanceState(): Parcelable {
         val superState = super.onSaveInstanceState()
         return LineChartState(superState, dataSet)
@@ -261,14 +269,6 @@ class LineChartView @JvmOverloads constructor(
         val bounds = Rect()
         textPaint.getTextBounds(text, 0, text.length, bounds)
         return bounds
-    }
-
-    override fun onDraw(canvas: Canvas) {
-        super.onDraw(canvas)
-
-        drawAxis(canvas)
-        drawChart(canvas)
-        drawTextAndSeparators(canvas)
     }
 
     private fun drawAxis(canvas: Canvas) {

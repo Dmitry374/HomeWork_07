@@ -195,22 +195,22 @@ class PieChartView @JvmOverloads constructor(
     }
 
     private fun drawCircle(canvas: Canvas) {
-        for (percent in partsOfCircleList) {
-            if (animationSweepAngle > percent.startAtCircleDegree + percent.amountOfCircle) {
+        for (model in partsOfCircleList) {
+            if (animationSweepAngle > model.startAtCircleDegree + model.amountOfCircle) {
                 canvas.drawArc(
                     circleRect,
-                    percent.startAtCircleDegree,
-                    percent.amountOfCircle,
+                    model.startAtCircleDegree,
+                    model.amountOfCircle,
                     false,
-                    percent.paint
+                    model.paint
                 )
-            } else if (animationSweepAngle > percent.startAtCircleDegree) {
+            } else if (animationSweepAngle > model.startAtCircleDegree) {
                 canvas.drawArc(
                     circleRect,
-                    percent.startAtCircleDegree,
-                    animationSweepAngle - percent.startAtCircleDegree,
+                    model.startAtCircleDegree,
+                    animationSweepAngle - model.startAtCircleDegree,
                     false,
-                    percent.paint
+                    model.paint
                 )
             }
         }
