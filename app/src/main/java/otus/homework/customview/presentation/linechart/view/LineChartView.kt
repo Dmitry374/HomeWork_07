@@ -189,8 +189,7 @@ class LineChartView @JvmOverloads constructor(
 
         daysBetween = ChronoUnit.DAYS.between(minTime, maxTime)
 
-//        invalidate()
-//        requestLayout()
+        requestLayout()
     }
 
     /**
