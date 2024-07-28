@@ -1,4 +1,4 @@
-package otus.homework.customview
+package otus.homework.customview.presentation.piechart.view.model
 
 import android.os.Parcelable
 import android.view.View.BaseSavedState

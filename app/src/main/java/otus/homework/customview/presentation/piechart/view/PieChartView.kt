@@ -1,4 +1,4 @@
-package otus.homework.customview
+package otus.homework.customview.presentation.piechart.view
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -14,6 +14,10 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
+import otus.homework.customview.R
+import otus.homework.customview.presentation.piechart.model.PieChartModel
+import otus.homework.customview.presentation.piechart.view.model.CategoryExpenseModel
+import otus.homework.customview.presentation.piechart.view.model.PieChartState
 import otus.homework.customview.utils.dp
 import otus.homework.customview.utils.sp
 import kotlin.math.atan2

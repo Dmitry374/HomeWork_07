@@ -1,4 +1,4 @@
-package otus.homework.customview
+package otus.homework.customview.presentation.linechart.model
 
 import java.time.LocalDate
 

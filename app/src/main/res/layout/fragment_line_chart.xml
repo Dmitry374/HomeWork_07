@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <otus.homework.customview.presentation.linechart.view.LineChartView
+        android:id="@+id/lineChartView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/line_chart_background"
+        app:lineChartColor="@color/line_chart_color"
+        app:lineChartStrokeWidth="3dp"
+        app:lineChartSeparatorColor="@color/line_chart_separator_color"
+        app:lineChartTextSize="12sp"
+        app:lineChartTextColor="@color/line_chart_text_color"
+        app:lineChartAxisColor="@color/line_chart_axis_color"
+        app:lineChartAxisStrokeWidth="3dp"/>
+
+</LinearLayout>

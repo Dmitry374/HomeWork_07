@@ -1,4 +1,4 @@
-package otus.homework.customview
+package otus.homework.customview.presentation.piechart.model
 
 import android.graphics.Paint
 

@@ -1,4 +1,4 @@
-package otus.homework.customview
+package otus.homework.customview.data.model
 
 data class PayloadItemRaw(
     val id: Long,

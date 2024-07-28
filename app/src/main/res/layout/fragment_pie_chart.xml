@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <otus.homework.customview.presentation.piechart.view.PieChartView
+        android:id="@+id/pieChartView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@color/pie_chart_background"
+        app:pieChartCirclePadding="8dp"
+        app:pieChartCircleStrokeWidth="15dp"
+        app:pieChartColors="@array/pie_chart_colors"
+        app:pieChartTextAmount="@string/total_text"
+        app:pieChartTextAmountColor="@color/amount"
+        app:pieChartTextAmountSize="30sp"
+        app:pieChartTextDescriptionColor="@color/description"
+        app:pieChartTextDescriptionSize="14sp" />
+
+</LinearLayout>
