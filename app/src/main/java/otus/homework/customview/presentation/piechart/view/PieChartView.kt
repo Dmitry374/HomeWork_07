@@ -171,10 +171,10 @@ class PieChartView @JvmOverloads constructor(
     }
 
     override fun onRestoreInstanceState(state: Parcelable?) {
-        val analyticalPieChartState = state as? PieChartState
-        super.onRestoreInstanceState(analyticalPieChartState?.superState ?: state)
+        val pieChartState = state as? PieChartState
+        super.onRestoreInstanceState(pieChartState?.superState ?: state)
 
-        dataList = analyticalPieChartState?.dataList ?: mutableListOf()
+        dataList = pieChartState?.dataList ?: mutableListOf()
     }
 
     fun setData(list: List<CategoryExpenseModel>) {

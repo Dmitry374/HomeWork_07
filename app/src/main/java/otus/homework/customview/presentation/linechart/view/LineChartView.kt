@@ -8,11 +8,13 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.Rect
 import android.graphics.Typeface
+import android.os.Parcelable
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
 import otus.homework.customview.R
 import otus.homework.customview.presentation.linechart.model.Expense
+import otus.homework.customview.presentation.linechart.model.LineChartState
 import otus.homework.customview.presentation.linechart.view.model.ExpenseModel
 import otus.homework.customview.utils.dp
 import otus.homework.customview.utils.formatToString
@@ -176,6 +178,18 @@ class LineChartView @JvmOverloads constructor(
                 setMeasuredDimension(width, height)
             }
         }
+    }
+
+    override fun onSaveInstanceState(): Parcelable {
+        val superState = super.onSaveInstanceState()
+        return LineChartState(superState, dataSet)
+    }
+
+    override fun onRestoreInstanceState(state: Parcelable?) {
+        val lineChartState = state as? LineChartState
+        super.onRestoreInstanceState(lineChartState?.superState ?: state)
+
+        dataSet = lineChartState?.dataList ?: mutableListOf()
     }
 
     fun setData(dataList: List<Expense>) {
