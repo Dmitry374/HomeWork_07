@@ -1,24 +1,33 @@
 package otus.homework.customview
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import otus.homework.customview.utils.toLocalDate
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val pieChartView = findViewById<PieChartView>(R.id.pieChartView)
+//        val pieChartView = findViewById<PieChartView>(R.id.pieChartView)
+//
+//        pieChartView.apply {
+//            setData(getExpenseData())
+//            onCategoryClick = { categoryName ->
+//                Toast.makeText(this@MainActivity, categoryName, Toast.LENGTH_SHORT).show()
+//            }
+//        }
 
-        pieChartView.apply {
-            setData(getExpenseData())
-            onCategoryClick = { categoryName ->
-                Toast.makeText(this@MainActivity, categoryName, Toast.LENGTH_SHORT).show()
-            }
-        }
+        val lineChartView = findViewById<LineChartView>(R.id.lineChartView)
+
+        val dataList = getExpenseData2("Продукты")
+
+        lineChartView.setData(dataList)
     }
 
     private fun getExpenseData(): List<CategoryExpenseModel> {
@@ -35,6 +44,16 @@ class MainActivity : AppCompatActivity() {
             payloadJson,
             object : TypeToken<List<PayloadItemRaw>>() {}.type
         )
+    }
+
+    private fun getExpenseData2(category: String): List<Expense> {
+        val expenseRawList = getExpenseRawList()
+        return expenseRawList.sortedBy { it.time }.filter { it.category == category }.map {
+            Expense(
+                amount = it.amount,
+                localDate = (it.time * 1000).toLocalDate()
+            )
+        }
     }
 
     private fun mapToCategoryExpenseModelList(list: List<PayloadItemRaw>): List<CategoryExpenseModel> {

@@ -11,4 +11,14 @@
         <attr name="pieChartTextDescriptionColor" format="color" />
         <attr name="pieChartTextAmount" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="LineChartView">
+        <attr name="lineChartColor" format="color" />
+        <attr name="lineChartStrokeWidth" format="dimension" />
+        <attr name="lineChartSeparatorColor" format="color" />
+        <attr name="lineChartTextSize" format="dimension" />
+        <attr name="lineChartTextColor" format="color" />
+        <attr name="lineChartAxisColor" format="color" />
+        <attr name="lineChartAxisStrokeWidth" format="dimension" />
+    </declare-styleable>
 </resources>

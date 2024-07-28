@@ -24,4 +24,10 @@
         <item>#EFB480</item>
         <item>#5B4998</item>
     </array>
+
+    <color name="line_chart_color">#FF8317</color>
+    <color name="line_chart_separator_color">#888888</color>
+    <color name="line_chart_text_color">#4A4A4A</color>
+    <color name="line_chart_axis_color">#6E6E6E</color>
+    <color name="line_chart_background">#EDEDED</color>
 </resources>
